@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>スロット試作</title>
+	<link rel="stylesheet" type="text/css" href="RFAslot.css">
+</head>
+<body>
+	<audio id="resultAnnounceMusic" src="./music/resultAnnounce.mp3"></audio>
+	<div class="wrapper">
+		<ul class="tabs" id="tabs">
+			<div class="list">
+				<li class="tab tab20 active">筋トレコース</li>
+				<li class="tab tab28">左右バランスコース</li>
+				<li class="tab tab50">リズム系コース</li>
+			</div>
+		</ul>
+		
+		<!--20回コースタブの内容-->
+		<div class="contents tab20 show">
+			<img id="image_ring" src="./img/ring1.png">
+			<div class="slot">
+				<canvas id="skill_slot" class="skill_slots"></canvas>
+				<img class="ringcon" id="ringcon" src="./img/ringcon.png">
+			</div>
+			<div class="buttons">
+				<button class="button" id="button" value="start">筋トレコース　スタート</button>
+			</div>
+
+			<!--PCで表示-->
+			<div class="popup" id="popup1">
+				<canvas id='result'></canvas>
+				<div id="black-background"></div>
+			</div>
+
+			<!--スマホで表示-->
+			<div id="result_contents_phone">
+				<canvas id='result_phone'></canvas>
+				<div id="black-background_phone"></div>
+			</div>
+
+		</div>
+
+		<!--28回コースタブの内容-->
+		<div class="contents tab28">
+			<img id="image_robo" src="./img/robo.png">
+			<div class="slot">
+				<canvas id="skill_slot2" class="skill_slots"></canvas>
+				<img class="ringcon" id="ringcon2" src="./img/ringcon.png">
+			</div>
+			<div class="buttons">
+				<button class="button" id="button2" value="start">左右バランスコース　スタート</button>
+			</div>
+
+			<div class="popup"id="popup2">
+				<canvas id='result2'></canvas>
+				<div id="black-background2"></div>
+			</div>
+
+			<div id="result_contents_phone2">
+				<canvas id='result_phone2'></canvas>
+				<div id="black-background_phone2"></div>
+			</div>
+
+		</div>
+
+		<!--50回コースタブの内容-->
+		<div class="contents tab50">
+			<img id="image_dorago" src="./img/dorago.png">
+			<div class="slot">
+				<canvas id="skill_slot3" class="skill_slots"></canvas>
+				<img class="ringcon" id="ringcon3" src="./img/ringcon.png">
+			</div>
+			<div class="buttons">
+				<button class="button" id="button3" value="start">リズム系コース　スタート</button>
+			</div>
+		
+			<div class="popup" id="popup3">
+				<canvas id='result3'></canvas>
+				<div id="black-background3"></div>
+			</div>
+
+			<div id="result_contents_phone3">
+				<canvas id='result_phone3'></canvas>
+				<div id="black-background_phone3"></div>
+			</div>
+			
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/tabSwitch.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script type="text/javascript" src="./js/class.js"></script>
+	<script type="text/javascript" src="./js/20course.js"></script>
+	<script type="text/javascript" src="./js/28course.js"></script>
+	<script type="text/javascript" src="./js/50course.js"></script>
+	
+</body>
+</html>
+

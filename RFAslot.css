@@ -1,0 +1,253 @@
+body{
+  background-image: url("./img/backimg.jpg");
+}
+
+div.wrapper{
+  max-width: 940px;
+  width: 100%;
+  margin: 64px auto 0 auto;
+}
+
+ul.tabs{
+  width: 90%;
+  margin: 12px auto 0px auto;
+}
+
+div.list{
+  display: flex;
+  justify-content: center;
+}
+
+ul.tabs li{
+  width: 28%;
+  height: 24px;
+  list-style-type: none;
+  padding: 10px;
+  margin-right: 4px;
+  margin-bottom: 12px;
+  background-color: #3b2cbd;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  line-height: 24px;
+  border: solid 1px #3b2cbd;
+}
+
+ul.tabs li.active{
+  background-color: white;
+  color: #3b2cbd;
+}
+
+img#image_ring{
+  width: 48%;
+  height: 160px;
+  margin: 0 auto;
+  display: block;
+}
+
+img#image_dorago,img#image_robo{
+  width: 32%;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+}
+
+div.slot{
+  position: relative;
+  width: 750px;
+  height: 225px;
+  margin: 12px auto 0 auto;
+}
+
+img.ringcon{
+  width: 750px;
+  height: 225px;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+}
+
+canvas.skill_slots{
+  width: 750px;
+  height: 225px;
+  position: absolute;
+  z-index: 1;
+}
+
+div.buttons{
+  position: relative;
+  width: 750px;
+  height: 64px;
+  margin: 64px  auto 0 auto;
+  text-align: center;
+}
+
+button.button{
+  width: 480px;
+  height: 80px;
+  font-size: 32px;
+  border: none;
+  color: white;
+  background: linear-gradient(to top right, #F61E00 0%, #ffd700 100%);
+}
+
+div.contents{
+  display: none;
+}
+
+div.contents.show{
+  display: block;
+}
+
+/*PCで表示するやつ*/
+div#popup1,div#popup2,div#popup3 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+div#popup1.is-show {
+  display: block;
+}
+
+div#popup2.is-show {
+  display: block;
+}
+
+div#popup3.is-show {
+  display: block;
+}
+
+canvas#result,canvas#result2,canvas#result3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  width: 750px;
+  height: 500px;
+  margin: 72px auto 0 auto;
+  background-image: url('./img/result.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+div#black-background,div#black-background2,div#black-background3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+
+/*PCで非表示*/
+
+
+
+@media only screen and (max-width: 599px){
+  body{
+    margin: 0;
+  }
+
+  div.wrapper{
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.tabs{
+    width: 100%;
+    overflow: hidden;
+    padding-left: 0;
+  }
+
+  ul.tabs li{
+    width: 25%;
+    font-size: 0.5rem;
+    padding: 4px;
+  }
+
+  img#image_ring{
+    width: 60%;
+    height: 100px;
+  }
+
+  img#image_dorago,img#image_robo{
+    width: 32%;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  div.slot{
+    width: 320px;
+    height: 120px;
+    margin-top: 0;
+  }
+
+  img.ringcon{
+    width: 320px;
+    height: 120px;
+  }
+
+  canvas.skill_slots{
+    width: 320px;
+    height: 120px;
+  }
+
+  div.buttons{
+    width: 250px;
+    height: 48px;
+    margin-top: 12px;
+  }
+
+  button.button{
+    width: 250px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  div#popup1,div#popup2,div#popup3{
+    display: none;
+  }
+
+  canvas#result,canvas#result2,canvas#result3{
+    display: none;
+  }
+
+  div#black-background,div#black-background2,div#black-background3{
+    display: none;
+  }
+
+  div#result_contents_phone,div#result_contents_phone2,div#result_contents_phone3{
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 24px auto 0 auto;
+  }
+
+  canvas#result_phone,canvas#result_phone2,canvas#result_phone3{
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: 200px;
+    display: block;
+    z-index: 1;
+    background-image: url('./img/result.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  div#black-background_phone,div#black-background_phone2,div#black-background_phone3{
+    z-index: 0;
+    display: none;
+  }
+}
